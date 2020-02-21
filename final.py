@@ -1,31 +1,28 @@
-class Conjunto():
+class lista():
     def __init__(self):
-        self.lista = []
-        self.quant = 0
+        self.lista = ['a','b','c']
+        self.quant = 3
 
     def inserir(self,valor):
-        if valor in self.lista:
-            return print("Já possui!")
-        else:
+        a = 0
+        i = 0
+        while i < self.quant:
+            if self.lista[i] != valor:
+                a += 1
+            else:
+                a = 0
+            i+=1
+        if a != 0:
             self.lista.append(valor)
             self.quant += 1
-            return self.lista
-                
+        else:
+            print("Já existe!")
+            
+
     def imprimir(self):
-        print(*self.lista, sep=',')
-        return print(self.lista)
+        return self.lista
 
     def tamanho(self):
         return self.quant
-
-    def pertence(self,valor):    
-        return valor in self.lista
-
-    def eh_subconjunto(self,valor,conj):
-        if valor.issubset(conj):
-            return print("É subconjunto!")
-        else:
-            return print("Não é subconjunto!")
-
 
     
