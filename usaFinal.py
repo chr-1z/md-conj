@@ -1,9 +1,16 @@
-import final
+from final import *
 
-p = final.lista()
-p.inserir('f')
-print(p.imprimir())
-p.inserir('g')
-p.inserir('h')
-p.inserir('i')
-print(p.imprimir())
+A = Conjunto()
+B = Conjunto()
+
+A.inserir('a')
+#A.inserir('b')
+#A.inserir('B')
+
+B.inserir('b')
+#B.inserir('cb')
+
+
+#A.imprimir()
+
+#print(A.pertence('B'))
